@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt0-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,22 +11,222 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Product list with cart</title>
-  </head>
-  <body>
-    Desserts Waffle with Berries Waffle 6.50 Add to Cart Vanilla Bean Crème
-    Brûlée Crème Brûlée 7.00 Add to Cart Macaron Mix of Five Macaron 8.00 Add to
-    Cart Classic Tiramisu Tiramisu 5.50 Add to Cart Pistachio Baklava Baklava
-    4.00 Add to Cart Lemon Meringue Pie Pie 5.00 Add to Cart Red Velvet Cake
-    Cake 4.50 Add to Cart Salted Caramel Brownie Brownie 4.50 Add to Cart
-    Vanilla Panna Cotta Panna Cotta 6.50 Add to Cart Your Cart (<!-- Quantity -->)
-    Your added items will appear here
+    <title>Product List</title>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </body>
+    <body>
+      <main>
+        <header><h1>Desserts 🧁</h1></header>
+        <ul class="dessertsList">
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-waffle-desktop.jpg"
+              alt="Waffle"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Waffle</span>
+                <span class="type"><strong>Waffle with Berries</strong></span>
+                <span class="price">$6.50</span>
+              </div>
+
+            </footer>
+          </li>
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-creme-brulee-desktop.jpg"
+              alt="Crème Brûlée"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Crème Brûlée</span>
+                <span class="type"><strong>Vanilla Bean Crème Brûlée</strong></span>
+                <span class="price">$7.00</span>
+              </div>
+
+            </footer>
+          </li>
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-macaron-desktop.jpg"
+              alt="Macaron"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Macaron</span>
+                <span class="type"><strong>Macaron Mix of Five</strong></span>
+                <span class="price">$8.00</span>
+              </div>
+
+            </footer>
+          </li>
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-tiramisu-desktop.jpg"
+              alt="Tiramisu"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Tiramisu</span>
+                <span class="type"><strong>Classic Tiramisu</strong></span>
+                <span class="price">$5.50</span>
+              </div>
+
+            </footer>
+          </li>
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-baklava-desktop.jpg"
+              alt="Baklava"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Baklava</span>
+                <span class="type"><strong>Pistachio Baklava</strong></span>
+                <span class="price">$4.00</span>
+              </div>
+
+            </footer>
+          </li>
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-meringue-desktop.jpg"
+              alt="Meringue"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Meringue</span>
+                <span class="type"><strong>Lemon Meringue Pie</strong></span>
+                <span class="price">$5.00</span>
+              </div>
+
+            </footer>
+          </li>
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-cake-desktop.jpg"
+              alt="Red Velvet Cake"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Cake</span>
+                <span class="type"><strong>Red Velvet Cake</strong></span>
+                <span class="price">$4.50</span>
+              </div>
+
+            </footer>
+          </li>
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-brownie-desktop.jpg"
+              alt="Brownie"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Brownie</span>
+                <span class="type"><strong>Salted Caramel Brownie</strong></span>
+                <span class="price">$4.50</span>
+              </div>
+
+            </footer>
+          </li>
+          <li class="DessertItem">
+            <img
+              class="DessertImg"
+              src="./assets/images/image-panna-cotta-desktop.jpg"
+              alt="Panna Cotta"
+            />
+  
+            <footer>
+              <button>
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <span>Add to cart</span>
+              </button>
+              <div class="DessertDescription">
+                <span class="name">Panna Cotta</span>
+                <span class="type"><strong>Vanilla Panna Cotta</strong></span>
+                <span class="price">$6.50</span>
+              </div>
+
+            </footer>
+          </li>
+
+        </ul>
+      </main>
+      <aside>
+        <header><h2>Your cart</h2></header>
+        <ul class="cartPrice">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="cartInfo">
+          <header>
+            <span class="totalTxt">total:</span>
+            <span class="Totalprice">$12</span>
+          </header>
+  
+          <span>This is a <strong>carbon-neutral</strong> delivery</span>
+          <button>Confirm Order</button>
+        </div>
+      </aside>
+    </head>
+    </body>
+
 </html>
+
+

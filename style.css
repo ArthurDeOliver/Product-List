@@ -1,0 +1,118 @@
+:root {
+  /* Cores das fontes */
+  --font-color-primary: #382d20;
+  --font-color-secondary: #a29e97;
+  --font-color-tertiary: #6c6865;
+
+  /* Cores dos botões */
+  --button-color-primary: #c83b0e;
+  --button-color-secondary: #952c0c;
+
+  /* Cor de fundo */
+  --background-color: #fcf8f5;
+  --background-color-100: #f7e2d1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  align-items: flex-start;
+  color: var(--font-color-primary);
+  background-image: url(https://rare-gallery.com/uploads/posts/4585850-digital-art-material-style-android-l-pattern-minimalism-colorful-simple-background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+main,
+aside {
+  border-radius: 10px;
+
+  background-color: white;
+}
+
+main {
+  padding: 2rem;
+  /* height: 100%; */
+  /* border-radius: 10px; */
+  background-color: white;
+}
+
+main header {
+  margin-bottom: 15px;
+}
+.dessertsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* height: 1200px; */
+  gap: 1rem;
+}
+
+.DessertItem {
+  max-width: calc(33% - 1rem);
+  max-height: 348px;
+}
+
+.DessertImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.DessertItem footer {
+  width: 100%;
+  transform: translateY(-35px);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.DessertItem footer button {
+  display: flex;
+  font-weight: 600;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 30px;
+  border: 1px solid var(--button-color-primary);
+  background-color: var(--background-color);
+  width: 170px;
+  height: 50px;
+  /* border: none; */
+  padding: 1rem;
+}
+
+.DessertDescription {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.name {
+  font-size: 14px;
+  color: var(--font-color-tertiary);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--button-color-primary);
+}
+
+aside {
+  position: sticky;
+  top: 1rem;
+}

@@ -1,14 +1,9 @@
 :root {
-  /* Cores das fontes */
   --font-color-primary: #382d20;
   --font-color-secondary: #a29e97;
   --font-color-tertiary: #6c6865;
-
-  /* Cores dos botões */
   --button-color-primary: #c83b0e;
   --button-color-secondary: #952c0c;
-
-  /* Cor de fundo */
   --background-color: #fcf8f5;
   --background-color-100: #f7e2d1;
 }
@@ -23,10 +18,10 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 21.88rem;
   align-items: flex-start;
   color: var(--font-color-primary);
-  background-image: url(https://rare-gallery.com/uploads/posts/4585850-digital-art-material-style-android-l-pattern-minimalism-colorful-simple-background.jpg);
+  background-image: url(https://static.vecteezy.com/system/resources/previews/010/928/086/original/dessert-seamless-background-template-free-vector.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,45 +32,42 @@ body {
 
 main,
 aside {
-  border-radius: 10px;
-
+  border-radius: 0.63rem;
   background-color: white;
 }
 
 main {
   padding: 2rem;
-  /* height: 100%; */
-  /* border-radius: 10px; */
   background-color: white;
 }
 
 main header {
-  margin-bottom: 15px;
+  margin-bottom: 0.94rem;
 }
+
 .dessertsList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* height: 1200px; */
   gap: 1rem;
 }
 
 .DessertItem {
   max-width: calc(33% - 1rem);
-  max-height: 348px;
+  height: 21.75rem;
 }
 
 .DessertImg {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.63rem;
 }
 
 .DessertItem footer {
   width: 100%;
-  transform: translateY(-35px);
+  transform: translateY(-2.19rem);
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.31rem;
   flex-direction: column;
 }
 
@@ -86,24 +78,27 @@ main header {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border-radius: 30px;
-  border: 1px solid var(--button-color-primary);
+  border-radius: 1.88rem;
+  border: 0.1rem solid var(--button-color-primary);
   background-color: var(--background-color);
-  width: 170px;
-  height: 50px;
-  /* border: none; */
+  max-width: 10.63rem;
+  max-height: 3.13rem;
   padding: 1rem;
+}
+
+.DessertItem footer button:hover {
+  color: var(--button-color-primary);
 }
 
 .DessertDescription {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 5px;
+  gap: 0.31rem;
 }
 
 .name {
-  font-size: 14px;
+  font-size: 0.88rem;
   color: var(--font-color-tertiary);
 }
 
@@ -114,5 +109,132 @@ main header {
 
 aside {
   position: sticky;
-  top: 1rem;
+  top: 2rem;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+aside header {
+  color: var(--button-color-primary);
+}
+
+.cartItens {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cartItens li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qnt {
+  font-size: 1.25rem;
+  color: var(--button-color-primary);
+}
+
+.remove {
+  border: 0.13rem solid var(--font-color-secondary);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.remove img {
+  padding: 0.19rem;
+  width: 100%;
+  height: 100%;
+}
+
+.remove:hover {
+  border: 0.13rem solid var(--font-color-primary);
+}
+
+.cartItens li div {
+  width: 100%;
+}
+
+.cartItens li div :nth-child(1) {
+  font-size: 0.88rem;
+}
+
+.calc {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calc :nth-child(1) {
+  color: var(--button-color-primary);
+}
+
+.calc :nth-child(2),
+.calc :nth-child(3) {
+  color: var(--font-color-tertiary);
+  font-size: 0.75rem;
+}
+
+.calc :nth-child(3) {
+  font-weight: bold;
+}
+
+.cartInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.totalWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Totalprice {
+  font-size: 1.56rem;
+  font-weight: 500;
+}
+
+.carbon {
+  width: 100%;
+  border-radius: 0.31rem;
+  padding: 0.94rem 0.63rem;
+  background-color: #e6e6e6;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.31rem;
+}
+
+.cartInfo button {
+  display: flex;
+  font-weight: 600;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  border-radius: 1.88rem;
+  border: none;
+  background-color: var(--button-color-primary);
+  width: 100%;
+  max-height: 3.13rem;
+  padding: 1rem;
+  transition: background-color 0.2s ease-in;
+}
+
+.cartInfo button:hover {
+  background-color: var(--button-color-secondary);
 }

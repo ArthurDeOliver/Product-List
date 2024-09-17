@@ -208,19 +208,45 @@
         </ul>
       </main>
       <aside>
-        <header><h2>Your cart</h2></header>
-        <ul class="cartPrice">
-          <li></li>
-          <li></li>
-          <li></li>
+        <header><h2>Your cart <span id="dessertsCount">(4)</span></h2></header>
+        <ul class="cartItens">
+          <li>
+            <div>
+              <span><strong>Classic Tiramisu</strong></span>
+              <div class="calc">
+                <span>1x</span>
+                <span>$5.50</span>
+                <span>$5.50</span>
+              </div>
+            </div>
+
+            <button class="remove">
+              <img src="./assets/images/icon-remove-item.svg" alt="">
+            </button>
+          </li>
+          <li>
+            <div>
+              <span><strong>Classic Tiramisu</strong></span>
+              <div class="calc">
+                <span>1x</span>
+                <span>$5.50</span>
+                <span>$5.50</span>
+              </div>
+            </div>
+
+            <button class="remove">
+              <img src="./assets/images/icon-remove-item.svg" alt="">
+            </button>
+          </li>
+
         </ul>
         <div class="cartInfo">
-          <header>
-            <span class="totalTxt">total:</span>
+          <div class="totalWrapper">
+            <span class="totalTxt">Order total</span>
             <span class="Totalprice">$12</span>
-          </header>
+          </div>
   
-          <span>This is a <strong>carbon-neutral</strong> delivery</span>
+          <span class="carbon"><img src="./assets/images/icon-carbon-neutral.svg" alt="">This is a <strong>carbon-neutral</strong> delivery</span>
           <button>Confirm Order</button>
         </div>
       </aside>

@@ -124,9 +124,9 @@ aside {
   padding: 2rem;
 }
 
-.type {
+/* .type {
   text-wrap: nowrap;
-}
+} */
 
 aside header {
   width: 100%;
@@ -245,11 +245,21 @@ aside header {
 }
 
 /* Responsivo para Mobile */
-@media (max-width: 1047px) {
+
+@media (min-width: 515px) and (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  .DessertItem {
+    max-width: calc(50% - 0.6rem);
+  }
+}
+
+@media (max-width: 515px) {
   body {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem;
     gap: 1rem;
     background-size: cover;
   }
@@ -259,6 +269,7 @@ aside header {
   }
 
   .dessertsList {
+    gap: 2rem;
     justify-content: center;
   }
 

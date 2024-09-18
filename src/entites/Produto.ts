@@ -1,4 +1,6 @@
-class Produto {
+import { v4 as uuidv4 } from "uuid";
+
+export class Produto {
   private _imageUrl: string;
   private _category: string;
   private _name: string;
@@ -10,7 +12,7 @@ class Produto {
     this._category = category;
     this._name = name;
     this._price = price;
-    //TODO    this._id = id
+    this._id = uuidv4();
   }
 
   get price() {
@@ -19,4 +21,8 @@ class Produto {
   get name() {
     return this._name;
   }
+
+  // get id() {
+  //   return this._id;
+  // }
 }

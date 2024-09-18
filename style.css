@@ -51,11 +51,11 @@ main header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.6rem;
 }
 
 .DessertItem {
-  max-width: calc(33% - 1rem);
+  max-width: calc(33% - 0.6rem);
   max-height: 320px;
   margin-bottom: 1rem;
 }
@@ -116,15 +116,26 @@ main header {
 aside {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   gap: 1rem;
   position: sticky;
   top: 3rem;
   padding: 2rem;
 }
 
+.type {
+  text-wrap: nowrap;
+}
+
 aside header {
+  width: 100%;
   color: var(--button-color-primary);
 }
+/* 
+.imgEmpty{
+  w
+} */
 
 .cartItens {
   display: flex;

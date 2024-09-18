@@ -96,6 +96,10 @@ main header {
   color: var(--button-color-primary);
 }
 
+.DessertItem:hover .DessertImg {
+  outline: 0.1rem solid var(--button-color-primary);
+}
+
 .DessertDescription {
   display: flex;
   flex-direction: column;
@@ -124,18 +128,10 @@ aside {
   padding: 2rem;
 }
 
-/* .type {
-  text-wrap: nowrap;
-} */
-
 aside header {
   width: 100%;
   color: var(--button-color-primary);
 }
-/* 
-.imgEmpty{
-  w
-} */
 
 .cartItens {
   display: flex;

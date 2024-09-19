@@ -23,7 +23,7 @@ body {
   align-items: flex-start;
   color: var(--font-color-primary);
   /* background-image: url(./assets/images/image.png); */
-  background-image: url(./assets/images/pattern_plaid-pattern-2_1_2_0-0_135_1__fffaf6_fab39c.png);
+  background-image: url(../../assets/images/pattern_plaid-pattern-2_1_2_0-0_135_1__fffaf6_fab39c.png);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -238,86 +238,4 @@ aside header {
 
 .cartInfo button:hover {
   background-color: var(--button-color-secondary);
-}
-
-/* Responsivo para Mobile */
-
-@media (min-width: 558px) and (max-width: 995px) {
-  body {
-    grid-template-columns: 1fr;
-  }
-
-  .dessertsList {
-    gap: 2rem;
-  }
-
-  .DessertItem {
-    height: inherit;
-    /* margin-bottom: 150px; */
-    max-width: calc(50% - 2rem);
-  }
-}
-
-@media (max-width: 555px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-    background-size: cover;
-  }
-
-  main {
-    padding: 1.5rem;
-  }
-
-  .dessertsList {
-    gap: 2rem;
-    justify-content: center;
-  }
-
-  .DessertItem {
-    margin-bottom: 0;
-    max-width: 100%;
-    max-height: 850px;
-  }
-
-  aside {
-    width: 100%;
-    position: relative;
-    padding: 1.5rem;
-    top: 0;
-  }
-
-  .cartInfo {
-    width: 100%;
-  }
-
-  .DessertItem {
-    width: 100%;
-  }
-
-  .cartItens li {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .cartItens li div {
-    align-items: center;
-  }
-
-  .remove {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .Totalprice {
-    font-size: 1.25rem;
-  }
-
-  .DessertItem footer button {
-    /* width: 8.5rem; */
-    height: 2.25rem;
-  }
 }

@@ -51,12 +51,12 @@ main header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 .DessertItem {
-  max-width: calc(33% - 0.6rem);
-  max-height: 320px;
+  max-width: calc(33% - 1rem);
+  max-height: 330px;
   margin-bottom: 1rem;
 }
 

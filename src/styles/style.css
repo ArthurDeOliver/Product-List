@@ -5,7 +5,7 @@
   --button-color-primary: #c83b0e;
   --button-color-secondary: #952c0c;
   --background-color: #fcf8f5;
-  --background-color-100: #f7e2d1;
+  --background-color-100: #f7dac2;
   --bg-color-50: #eb659d;
 }
 
@@ -36,7 +36,7 @@ body {
 main,
 aside {
   border-radius: 0.63rem;
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 main {
@@ -158,6 +158,9 @@ main header {
 }
 
 .no-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 2rem;
 }
 

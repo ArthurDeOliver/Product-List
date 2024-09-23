@@ -51,11 +51,11 @@ main header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .DessertItem {
-  max-width: calc(33% - 1rem);
+  max-width: calc(33% - 2rem);
   max-height: 330px;
   margin-bottom: 1rem;
 }
@@ -86,8 +86,8 @@ main header {
 .btnAdd {
   position: absolute;
   background-color: var(--button-color-primary);
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   font-weight: 600;
   color: var(--background-color);
   justify-content: space-between;
@@ -126,8 +126,8 @@ main header {
   align-items: center;
   gap: 1rem;
   border-radius: 1.88rem;
-  /* border: 0.1rem solid var(--button-color-primary); */
-  border: none;
+  border: 0.1rem solid var(--button-color-primary);
+  /* border: none; */
   background-color: #fdebdb;
   width: 70%;
   height: 2.53rem;

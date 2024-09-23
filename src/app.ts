@@ -10,6 +10,25 @@
 */
 
 import { Produto } from "./entites/Produto";
-import * as product from "../data.json";
+import * as p from "../data.json";
+import { Cart } from "./entites/Cart";
 
-console.log(product[1].name);
+const cart = new Cart();
+// console.log(cart);
+
+const produto1 = new Produto("http://example.com", "Fruta", "Maca", 10);
+const produto2 = new Produto("http://example.com", "Fruta", "banana", 30);
+
+cart.addToCart(produto1);
+cart.addToCart(produto2);
+
+console.log(cart);
+console.log(cart.product);
+console.log(cart.total);
+
+function addToCartDesaparecer() {
+  console.log("teste");
+  const button = document.getElementById("addToCart");
+
+  button.style.zIndex = "0";
+}

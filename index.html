@@ -34,7 +34,7 @@
   
             <footer>
               <div class="btnWrapper">
-                <button class="btnCard">
+                <button class="btnCard" id="addToCart" onclick=addToCartDesaparecer()>
                   <img src="./assets/images/icon-add-to-cart.svg" alt="" />
                   <span>Add to cart</span>
                 </button>
@@ -217,7 +217,6 @@
 
             </footer>
           </li>
-
         </ul>
       </main>
       <aside>
@@ -267,13 +266,15 @@
         </div> -->
         
         <div class="empty">
-          <header><h2>Your cart </h2></header>
+          <header><h2>Your cart (0)</h2></header>
           <img class="imgEmpty" src="./assets/images/illustration-empty-cart.svg" alt="">
           <span>Your added items will appear here</span>
         </div>
 
       </aside>
-    </head>
+    
+
+    <script src="./src/app.ts"></script>
     </body>
 
 </html>

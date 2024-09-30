@@ -17,10 +17,6 @@ export class Product {
     this._imageUrl = imageUrl;
   }
 
-  get total() {
-    return this._total;
-  }
-
   calculateTotal() {
     this._total = this._quantity * this._price;
   }
@@ -39,5 +35,17 @@ export class Product {
 
   get price() {
     return this._price;
+  }
+
+  get quantity() {
+    return this._quantity;
+  }
+
+  get id() {
+    return this._id;
+  }
+
+  get total() {
+    return this._total;
   }
 }

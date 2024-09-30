@@ -3,7 +3,7 @@
 // Criar os objetos de produto utilizando os
 // dados de data.json
 
-import { Product } from "./entites/Produto";
+import { Product } from "./entites/Product";
 import data from "../data.json";
 import { Cart } from "./entites/Cart";
 
@@ -15,5 +15,8 @@ product1.incrementQuantity();
 const product2 = new Product("Maçã", "Fruta", 5, "http://example.com");
 product2.incrementQuantity();
 product2.incrementQuantity();
+// console.log(Cart);
+
+Cart.removeProduct(product1);
 
 console.log(Cart);

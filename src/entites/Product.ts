@@ -33,6 +33,50 @@ export class Product {
     this.calculateTotal();
   }
 
+  toHTML() {
+    const productListHTML: HTMLElement | null =
+      document.getElementById("product-list");
+
+    const productCard = document.createElement("li");
+    productCard.className = "DessertItem";
+
+    productCard.innerHTML = `
+             <img
+               class="DessertImg"
+               src="${this._imageUrl}"
+               alt="${this._name}"
+             />
+
+             <footer>
+               <div class="btnWrapper">
+                 <button class="btnCard" id="addToCart" onclick=addToCartDesaparecer()>
+                   <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                   <span>Add to cart</span>
+                 </button>
+                 <button class="btnAdd">
+                   <div>
+                     <img src="./assets/images/icon-decrement-quantity.svg" alt="">
+                   </div>
+                   <span>0</span>
+                   <div>
+                     <img src="./assets/images/icon-increment-quantity.svg" alt="">
+                   </div>
+                 </button>
+               </div>
+
+               <div class="DessertDescription">
+                 <span class="name">${this._category}</span>
+                 <span class="type"><strong>${this._name}</strong></span>
+                 <span class="price">$${this.price}</span>
+               </div>
+
+            </footer>
+
+     `;
+
+    productListHTML?.appendChild(productCard);
+  }
+
   get price() {
     return this._price;
   }

@@ -141,6 +141,8 @@ main header {
 }
 
 .DessertDescription {
+  margin-top: 1rem;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   width: 100%;

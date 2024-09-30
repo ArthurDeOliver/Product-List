@@ -1,25 +1,32 @@
-import { Produto } from "./Produto";
+import { Product } from "./Produto";
 
 export class Cart {
-  private _quantidade: number = 0;
-  private _product: Produto[] = [];
-  private _total: number = 0;
+  private static _products: Product[] = [];
+  private static _total: number = 0;
 
-  addToCart(product: Produto) {
-    const productInCart = this._product.includes(product);
+  static calculateTotal() {
+    this._total = 0;
+
+    for (const product of this.products) {
+      this._total += product.total;
+    }
+  }
+
+  static addToCart(product: Product) {
+    const productInCart = this._products.includes(product);
 
     if (!productInCart) {
-      this._product?.push(product);
+      this._products.push(product);
     }
 
-    this._total += product.price;
+    this.calculateTotal();
   }
 
-  get total() {
+  static get products() {
+    return this._products;
+  }
+
+  static get total() {
     return this._total;
-  }
-
-  get product() {
-    return this._product;
   }
 }

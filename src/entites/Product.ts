@@ -17,30 +17,16 @@ export class Product {
     this._imageUrl = imageUrl;
   }
 
-  calculateTotal() {
-    this._total = this._quantity * this._price;
-  }
-
-  incrementQuantity() {
-    this._quantity++;
-    this.calculateTotal();
-
-    Cart.addToCart(this);
-  }
-
-  decrementQuantity() {
-    this._quantity--;
-    this.calculateTotal();
-  }
-
   toHTML() {
-    const productListHTML: HTMLElement | null =
-      document.getElementById("product-list");
+    const productListHTML = document.getElementById("product-list");
 
-    const productCard = document.createElement("li");
-    productCard.className = "DessertItem";
+    if (!productListHTML) return;
 
-    productCard.innerHTML = `
+    const productHTML = document.createElement("li");
+    productHTML.className = "DessertItem";
+    productHTML.id = this._id;
+
+    productHTML.innerHTML = `
              <img
                class="DessertImg"
                src="${this._imageUrl}"
@@ -49,15 +35,15 @@ export class Product {
 
              <footer>
                <div class="btnWrapper">
-                 <button class="btnCard" id="addToCart" onclick=addToCartDesaparecer()>
+                 <button class="btnCard" id="button-add-to-cart">
                    <img src="./assets/images/icon-add-to-cart.svg" alt="" />
                    <span>Add to cart</span>
                  </button>
-                 <button class="btnAdd">
+                 <button class="btnAdd" id="cartSelect">
                    <div>
                      <img src="./assets/images/icon-decrement-quantity.svg" alt="">
                    </div>
-                   <span>0</span>
+                   <span>${this._quantity}</span>
                    <div>
                      <img src="./assets/images/icon-increment-quantity.svg" alt="">
                    </div>
@@ -74,22 +60,47 @@ export class Product {
 
      `;
 
-    productListHTML?.appendChild(productCard);
-  }
+    const buttonAddToCartHTML = productHTML.querySelector(
+      "#button-add-to-cart"
+    );
+    buttonAddToCartHTML?.addEventListener("click", () =>
+      this.incrementQuantity()
+    );
 
-  get price() {
-    return this._price;
-  }
-
-  get quantity() {
-    return this._quantity;
+    productListHTML.appendChild(productHTML);
   }
 
   get id() {
     return this._id;
   }
 
+  get quantity() {
+    return this._quantity;
+  }
+
   get total() {
     return this._total;
+  }
+
+  calculateTotal() {
+    this._total = this._quantity * this._price;
+  }
+
+  incrementQuantity() {
+    this._quantity++;
+    this.calculateTotal();
+    // console.log(`quantity:`, this._quantity);
+
+    Cart.addToCart(this);
+  }
+
+  decrementQuantity() {
+    this._quantity--;
+    this.calculateTotal();
+    // TODO: remover o produto do carrinho se a quantidade for 0
+  }
+
+  get price() {
+    return this._price;
   }
 }

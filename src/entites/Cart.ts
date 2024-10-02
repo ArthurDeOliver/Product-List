@@ -2,33 +2,23 @@ import { Product } from "./Product";
 
 export class Cart {
   private static _products: Product[] = [];
-  private static _totalOrder: number = 0;
+  private static _orderTotal: number = 0;
   private static _totalQuantity: number = 0;
 
   static calculateTotal() {
-    this._totalOrder = 0;
+    this._orderTotal = 0;
     this._totalQuantity = 0;
 
     for (const product of this.products) {
-      this._totalOrder += product.total;
+      this._orderTotal += product.total;
       this._totalQuantity += product.quantity;
     }
   }
 
   static removeProduct(product: Product) {
-    //retorno implícito em uma linha apenas
-    this._products = this._products.filter((item) => {
-      return item.id != product.id;
-    });
-
+    // Remove um produto do carrinho, filtrando pelo produto em questão
+    this._products = this._products.filter((item) => item.id !== product.id);
     this.calculateTotal();
-
-    // const produtosFiltrados: Product[] = [];
-
-    // for (const item of this._products) {
-    //   if (item.id == product.id) continue;
-    //   produtosFiltrados.push(product);
-    // }
   }
 
   static addToCart(product: Product) {
@@ -39,6 +29,7 @@ export class Cart {
     }
 
     this.calculateTotal();
+    console.log(Cart._products);
   }
 
   static get products() {
@@ -46,6 +37,6 @@ export class Cart {
   }
 
   static get total() {
-    return this._totalOrder;
+    return this._orderTotal;
   }
 }

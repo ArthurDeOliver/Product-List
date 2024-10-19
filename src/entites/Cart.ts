@@ -39,4 +39,21 @@ export class Cart {
   static get total() {
     return this._orderTotal;
   }
+
+  static get totalQuantity() {
+    return this._totalQuantity;
+  }
+}
+
+const aside = document.getElementById("cartContainer");
+if (Cart.totalQuantity == 0) {
+  const cartEmpty = document.createElement("div");
+  cartEmpty.className = "empty";
+  cartEmpty.innerHTML = `
+    <header><h2>Your cart (0)</h2></header>
+    <img class="imgEmpty" src="./assets/images/illustration-empty-cart.svg" alt="">
+    <span>Your added items will appear here</span>
+  `;
+
+  aside?.appendChild(cartEmpty);
 }

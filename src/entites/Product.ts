@@ -40,11 +40,11 @@ export class Product {
                    <span>Add to cart</span>
                  </button>
                  <button class="btnAdd" id="cartSelect">
-                   <div>
+                   <div id="decrimentItem">
                      <img src="./assets/images/icon-decrement-quantity.svg" alt="">
                    </div>
-                   <span>${this._quantity}</span>
-                   <div>
+                   <span id="quantityItem">${this._quantity}</span>
+                   <div id="incrementItem">
                      <img src="./assets/images/icon-increment-quantity.svg" alt="">
                    </div>
                  </button>
@@ -62,10 +62,28 @@ export class Product {
 
     const buttonAddToCartHTML = productHTML.querySelector(
       "#button-add-to-cart"
-    );
-    buttonAddToCartHTML?.addEventListener("click", () =>
-      this.incrementQuantity()
-    );
+    ) as HTMLElement;
+
+    buttonAddToCartHTML?.addEventListener("click", () => {
+      this.incrementQuantity();
+      buttonAddToCartHTML.style.zIndex = "-1";
+    });
+
+    const btnIncrement = productHTML.querySelector(
+      "#incrementItem"
+    ) as HTMLElement;
+
+    btnIncrement.addEventListener("click", () => {
+      this.incrementQuantity();
+    });
+
+    const btnDecrement = productHTML.querySelector(
+      "#decrimentItem"
+    ) as HTMLElement;
+
+    btnDecrement.addEventListener("click", () => {
+      this.decrementQuantity();
+    });
 
     productListHTML.appendChild(productHTML);
   }
@@ -82,6 +100,10 @@ export class Product {
     return this._total;
   }
 
+  get price() {
+    return this._price;
+  }
+
   calculateTotal() {
     this._total = this._quantity * this._price;
   }
@@ -89,18 +111,36 @@ export class Product {
   incrementQuantity() {
     this._quantity++;
     this.calculateTotal();
-    // console.log(`quantity:`, this._quantity);
+    console.log(`quantity:`, this._quantity);
 
-    Cart.addToCart(this);
+    const itemCard = document.getElementById(this._id);
+    const quantityItem = itemCard?.querySelector(
+      "#quantityItem"
+    ) as HTMLElement;
+
+    quantityItem.innerHTML = `${this._quantity}`;
+
+    const quantityInfo = Cart.addToCart(this);
   }
 
   decrementQuantity() {
     this._quantity--;
     this.calculateTotal();
-    // TODO: remover o produto do carrinho se a quantidade for 0
-  }
+    console.log(this._quantity);
 
-  get price() {
-    return this._price;
+    const itemCard = document.getElementById(this._id);
+    const quantityItem = itemCard?.querySelector(
+      "#quantityItem"
+    ) as HTMLElement;
+
+    quantityItem.innerHTML = `${this._quantity}`;
+
+    const buttonAddToCartHTML = itemCard?.querySelector(
+      "#button-add-to-cart"
+    ) as HTMLElement;
+
+    if (this._quantity == 0) {
+      buttonAddToCartHTML.style.zIndex = "1";
+    }
   }
 }

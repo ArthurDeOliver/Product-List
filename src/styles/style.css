@@ -288,3 +288,8 @@ aside header {
 .cartInfo button:hover {
   background-color: var(--button-color-secondary);
 }
+
+#cartContainer {
+  position: sticky;
+  top: 2rem;
+}

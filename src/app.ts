@@ -1,8 +1,3 @@
-// importar data.json
-// importar entities/product.ts
-// Criar os objetos de produto utilizando os
-// dados de data.json
-
 import { Product } from "./entites/Product";
 import data from "../data.json";
 import { Cart } from "./entites/Cart";

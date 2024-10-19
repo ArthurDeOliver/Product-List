@@ -92,6 +92,10 @@ export class Product {
     return this._id;
   }
 
+  get name() {
+    return this._name;
+  }
+
   get quantity() {
     return this._quantity;
   }
@@ -142,5 +146,7 @@ export class Product {
     if (this._quantity == 0) {
       buttonAddToCartHTML.style.zIndex = "1";
     }
+
+    const quantityInfo = Cart.removeProduct(this);
   }
 }
